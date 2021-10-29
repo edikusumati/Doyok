@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo bash
 wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh
 wget https://github.com/hunshukajh/yes/raw/main/gas
 chmod +x gas cmdline_launcher.sh
