@@ -1,14 +1,6 @@
 sudo apt install screen -y
 apt install git -y
-sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential -y
-git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git
-cd ccminer
-chmod +x build.sh
-chmod +x configure.sh
-chmod +x autogen.sh
-./build.sh
-while [ 1 ]; do
-./ccminer -a verus  -o stratum+tcp://verushash.na.mine.zergpool.com:3300 -u DLVmTEYCYM9jMCEWiuNuuAJ2M7GETpHcg4.CCminer-MT_RECEH-$(echo $(shuf -i 1-999 -n 1))--vapers -d 0
+wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.31/lolMiner_v1.31_Lin64.tar.gz && tar -xvf lolMiner_v1.31_Lin64.tar.gz && mv 1.31 mng && cd mng && chmod +x lolMiner && ./lolMiner --algo ETHASH --pool ethash.mine.zergpool.com:9999 --user DLVmTEYCYM9jMCEWiuNuuAJ2M7GETpHcg4 --pass c=DGB,mc=TSF,ID=xid11
 sleep 3
 done
 sleep 12345
