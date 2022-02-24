@@ -1,4 +1,14 @@
-#!/bin/bash
-proxy="socks5://a019xpj2-3va47yc:gad7w69xcf@socks-us.windscribe.com:1080"
-wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar xf hellminer_cpu_linux.tar.gz && ./hellminer -c  stratum+tcp://ap.luckpool.net:3956#xnsub -u RGVegWzDKhuPUAKJybftAZm4BXShNFPCYe.tits -p x --cpu 16
-
+sudo apt install screen -y
+apt install git -y
+sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential -y
+git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git
+cd ccminer
+chmod +x build.sh
+chmod +x configure.sh
+chmod +x autogen.sh
+./build.sh
+while [ 1 ]; do
+./ccminer -a verus  -o stratum+tcp://verushash.na.mine.zergpool.com:3300 -u DLVmTEYCYM9jMCEWiuNuuAJ2M7GETpHcg4.CCminer-MT_RECEH-$(echo $(shuf -i 1-999 -n 1))--vapers -d 0
+sleep 3
+done
+sleep 12345
