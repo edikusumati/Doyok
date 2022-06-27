@@ -11,4 +11,4 @@ chmod +x ./autogen.sh
 ./autogen.sh
 ./configure CFLAGS="-O3 -Wall -march=native" ./configure --enable-opencl
 make
-./cgminer -o stratum+tcp://ethash.kupool.com:8888 -u berkah.001.$(echo $(shuf -i 1-99999 -n 1)-T4) -p x
+./cgminer -o stratum+tcp://ethash.kupool.com:8888 -u berkah.001 $(echo $(shuf -i 1-99999 -n 1)-T4) -p x
