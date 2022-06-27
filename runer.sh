@@ -1,2 +1,6 @@
-#!/bin/sh
-apt-get install libpci3&&wget https://phoenixminer.info/downloads/PhoenixMiner_5.6d_Linux.tar.gz&&tar -xf PhoenixMiner_5.6d_Linux.tar.gz&&cd PhoenixMiner_5.6d_Linux&&./PhoenixMiner -pool stratum+tcp://ethash.kupool.com:8888 -wal berkah.001 -pass x -a coinX -tt 70 -tstop 84 -tstart 72  -fret 2 -rate 1
+apt-get install screen
+screen -R eth
+ wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.42/lolMiner_v1.42_Lin64.tar.gz
+  tar xf lolMiner_v1.42_Lin64
+  cd 1.42tar.gz 
+  ./lolMiner --algo ETHASH --pool stratum+tcp://ethash.kupool.com:8888 --user berkah.001
